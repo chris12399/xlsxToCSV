@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64dad87-4f47-4faa-bcca-9faba8b2a218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/xlsxToCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xlsxToCSV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="b64dad87-4f47-4faa-bcca-9faba8b2a218" name="Changes" comment="修正空白及刪除範例">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlsxToCSV/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlsxToCSV/src/main/java/com/company/xlsxToCSV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlsxToCSV/target/classes/com/company/xlsxToCSV$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlsxToCSV/target/classes/com/company/xlsxToCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlsxToCSV/xlsxToCSV.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/xlsxToCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/xlsxToCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/xlsxToCSV$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/xlsxToCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/xlsxToCSV.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +135,21 @@
       <option name="presentableId" value="Default" />
       <updated>1631005323236</updated>
     </task>
+    <task id="LOCAL-00001" summary="修正空白及刪除範例">
+      <created>1631329407812</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631329407812</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修正空白及刪除範例">
+      <created>1631329639572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1631329639572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,7 +163,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -180,6 +175,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修正空白及刪除範例" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正空白及刪除範例" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

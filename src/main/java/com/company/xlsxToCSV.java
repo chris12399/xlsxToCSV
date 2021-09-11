@@ -60,7 +60,7 @@ public class xlsxToCSV {
 
                //login_name
                fos.write(cell2.toString().trim().getBytes());
-               fos.write("@gm.kl.edu.tw".getBytes());
+               fos.write("@mail.klcg.gov.tw".getBytes());
                fos.write(",".getBytes());
                //userpassword
                fos.write("password".getBytes());
@@ -73,7 +73,7 @@ public class xlsxToCSV {
                fos.write(",".getBytes());
                //email
                fos.write(cell2.toString().trim().getBytes());
-               fos.write("@gm.kl.edu.tw".getBytes());
+               fos.write("@mail.klcg.gov.tw".getBytes());
                fos.write(",".getBytes());
                fos.write("\r\n".getBytes());
            }

@@ -2,17 +2,15 @@ package com.company;
 
 import java.io.*;
 import java.util.Iterator;
+import java.util.Locale;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.*;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class xlsxToCSV {
@@ -22,9 +20,9 @@ public class xlsxToCSV {
 
        try{
            FileInputStream fis = new FileInputStream(inputFile);
-           FileOutputStream fos = new FileOutputStream(outputFile);
-//           OutputStreamWriter osw = new OutputStreamWriter(outputFile);
-
+           //FileOutputStream fos = new FileOutputStream(outputFile);
+           OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(outputFile),"UTF-8");
+           BufferedWriter bw = new BufferedWriter(osw);
            //read file
            Workbook workbook = null;
            //write file
@@ -38,16 +36,18 @@ public class xlsxToCSV {
                workbook = new HSSFWorkbook(fis);
            }
            int numberOfSheets = workbook.getNumberOfSheets();
+
             Row row;
             Cell cell1, cell2;
             Sheet sheet = workbook.getSheetAt(0);
             String[] titles = new String[] {"login_name","userpassword","name","depid","email"};
 
+           bw.write('\ufeff');
            for(String title : titles){
-               fos.write(title.getBytes());
-               fos.write(",".getBytes());
+               bw.write(title);
+               bw.write(",");
            }
-           fos.write("\r\n".getBytes());
+           bw.write("\r\n");
 
            for(int i = 1; i <= sheet.getLastRowNum(); i++) {
                row = sheet.getRow(i);
@@ -55,28 +55,29 @@ public class xlsxToCSV {
                cell1 = row.getCell(1);                //teacher's name
                cell2 = row.getCell(6);                //e-mail
 
-
                //trim()
 
                //login_name
-               fos.write(cell2.toString().trim().getBytes());
-               fos.write("@mail.klcg.gov.tw".getBytes());
-               fos.write(",".getBytes());
+               bw.write(cell2.toString().trim());
+               bw.write("@mail.klcg.gov.tw");
+               bw.write(",");
                //userpassword
-               fos.write("password".getBytes());
-               fos.write(",".getBytes());
+               bw.write("password");
+               bw.write(",");
                //name
-               fos.write(cell1.toString().getBytes());
-               fos.write(",".getBytes());
+               bw.write(cell1.toString());
+               bw.write(",");
                //depid
-               fos.write("100".getBytes());
-               fos.write(",".getBytes());
+               bw.write("173626");         //記得更換學校代碼
+               bw.write(",");
                //email
-               fos.write(cell2.toString().trim().getBytes());
-               fos.write("@mail.klcg.gov.tw".getBytes());
-               fos.write(",".getBytes());
-               fos.write("\r\n".getBytes());
+               bw.write(cell2.toString().trim());
+               bw.write("@mail.klcg.gov.tw");
+               bw.write(",");
+               bw.write("\r\n" );
            }
+           bw.close();
+           osw.close();
 
        } catch(Exception e) {
            System.out.println("*****read excel*****");
